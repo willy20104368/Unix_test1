@@ -1,8 +1,8 @@
 CC = gcc
 CFLAG = -std=c11 -O2 -Wall
-TARGET = assignment4
-SRCS = assignment4.c
-OBJS = assignment4.o
+TARGET = uniq
+SRCS = uniq.c
+OBJS = uniq.o
 
 all: $(TARGET)
 
