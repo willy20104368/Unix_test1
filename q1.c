@@ -69,7 +69,7 @@ int main(int argc, char *argv[]) {
 
     //fgets(prev_line, MAX_SIZE, file);
     int loop = 0;
-    while (loop++ <run) {
+    while (loop <run) {
         strcpy(line, str[loop]);
         if (case_insensitive) {
             if (strcasecmp(line, prev_line) != 0) {
@@ -98,7 +98,7 @@ int main(int argc, char *argv[]) {
                 count++;
             }
         }
-        
+        loop++;
     }
 
     // Print the last line if needed
