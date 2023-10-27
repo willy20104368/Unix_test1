@@ -55,7 +55,10 @@ int main(int argc, char *argv[]) {
     }
     //set file position to first
     fseek(file, 0, SEEK_SET);
-    string* str = (string*)malloc(run* sizeof(string));
+    char** str = (char**)malloc(run* sizeof(char*));
+    for(int i = 0;i<run;i++){
+        str[i] = (char*)malloc(MAX_SIZE * sizeof(char));
+    }
     int copy_run = 0;
     //copy file to array of string and sort
     while(fgets(line, MAX_SIZE, file) != NULL) {
