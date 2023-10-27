@@ -66,9 +66,9 @@ int main(int argc, char *argv[]) {
     }
     qsort(str, run, sizeof(const char*), myCompare);
 
-
+    strcpy(prev_line, str[0]);
     //fgets(prev_line, MAX_SIZE, file);
-    int loop = 0;
+    int loop = 1;
     while (loop <run) {
         strcpy(line, str[loop]);
         if (case_insensitive) {
